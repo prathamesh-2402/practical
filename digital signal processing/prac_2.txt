@@ -1,0 +1,13 @@
+//ramp signal
+/*it is a signal in which the negative values including the zero area positive numbers are non zero*/
+
+clc;
+clf;
+clear all;
+L=input("Enter the length of the ramp signal: ");
+n=-L:L;
+del_n=[zeros(1,L),0:L];
+plot2d3(del_n);
+title("Ramp Signal","fontsize",6);
+xlabel("Sample","fontsize",4);
+ylabel("Amplitude","fontsize",4);

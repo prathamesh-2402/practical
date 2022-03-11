@@ -1,0 +1,22 @@
+//dft idft
+/*DFT & IDFT stands for discrete fourier transform & inverse discrete fourier transform
+While using DFT & IDFT length of two signals must be same. If it is not same use 0 padding*/
+
+clc;
+clf;
+clear all;
+xn=input("Enter x[n]: ");
+hn=input("Enter h[n]: ");
+L=length(xn);
+xDFT = fft(xn,-1);
+hDFT = fft(hn,-1);
+disp(xDFT, "DFT of x[n] = ");
+disp(hDFT, "DFT of h[n] = ");
+yDFT = xDFT.*hDFT;
+disp(yDFT, "DFT of y[n] = ");
+Answer = abs(fft(yDFT,-1));
+disp(Answer, "Circular Convolution = ");
+IDFT = Anwer/L;
+disp(IDFT,"IDFT = ");
+
+//[2,3,4,5] / [5,2,3,4]

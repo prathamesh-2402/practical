@@ -1,0 +1,22 @@
+//linear using circular
+/*Linear convolution is the basic operation to calculate the output of any Linear time invarient system.*/
+
+clc;
+clf;
+clear all;
+x = input("enter x[n]: ");
+h = input("enter h[n]: ");
+N = length(x);
+M = length(h);
+L = N + M -1;
+xn = [x,zeros(1,L-N)];
+hn = [h,zeros(1,L-M)];
+x_new = [];
+for i = 1 : length(xn)
+  x_new = [x_new;xn];
+  xn = [xn($) xn(1:$-1)];
+end
+yn=x_new'*hn';
+disp(yn);
+
+//[2,3,4,5] / [1,2,3]

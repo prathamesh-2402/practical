@@ -1,0 +1,16 @@
+//discrete signal
+/*Exponential signal are the signals those values increase exponentially are ulter of axis*/
+
+clc;
+clf;
+clear all;
+L=input("Enter the length of Exponential signal: ");
+b=input("Enter the length of Ramp signal: ");
+n=-L:0.1:L;
+del_n=exp(b*n);
+plot2d3(del_n);
+title("Exponential Signal","fontsize",6);
+xlabel("Sample","fontsize",4);
+ylabel("Amplitude","fontsize",4);
+
+//10 , .4  /  10, -.4

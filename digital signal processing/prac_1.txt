@@ -1,0 +1,27 @@
+//simple signal
+/*it is a discrete samples having unit magnitude of origin & zero magnitude at all other simple instants*/
+
+clc;
+clf;
+clear all;
+L=input("Enter the length of the unit impulse signal: ");
+n=-L:L;
+del_n=[zeros(1,L),ones(1,1),zeros(1,L)];
+plot2d3(n,del_n);
+title("Unit Impulse Signal","fontsize",6);
+xlabel("Sample","fontsize",4);
+ylabel("Amplitude","fontsize",4);
+
+//step signal
+/*if a stop signal has unit magnitude then it is known as unit step signal*/
+
+clc;
+clf;
+clear all;
+L=input("Enter the length of the unit step signal: ");
+n=-L:L;
+del_n=[zeros(0,L),ones(1,L+1)];
+plot2d3(del_n);
+title("Unit Step Signal","fontsize",6);
+xlabel("Sample","fontsize",4);
+ylabel("Amplitude","fontsize",4);

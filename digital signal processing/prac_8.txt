@@ -1,0 +1,14 @@
+//FFT & IFFT
+/*Fast fourier transform in that determines discrete fourirer transform of an input.
+Significantly faster than computing it directly*/
+
+clc;
+clf;
+clear all;
+xn=input("Enter discrete signal: ");
+fourier_xn = fft(xn,-1);
+inv_xn = ifft(fourier_xn);
+disp(fourier_xn, 'Fourier transform: ');
+disp(inv_xn, 'Inverse fourier transform: ');
+
+//[0,1,2,3]
